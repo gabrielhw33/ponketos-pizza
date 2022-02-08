@@ -38,4 +38,5 @@ Route.group(() => {
 Route.group(() => {
     Route.post('/make', 'OrderController.store')
     Route.get('/index', 'OrderController.index')
+    Route.get('/:id', 'OrderController.show')
 }).prefix('api/orders').middleware()
