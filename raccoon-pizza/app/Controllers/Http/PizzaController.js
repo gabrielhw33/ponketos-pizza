@@ -38,7 +38,7 @@ class PizzaController {
               .toLowerCase()
           )}%`
         
-          pizzas.whereRaw('LOWER(title) LIKE ?', keyword)
+          pizzas.whereRaw('LOWER(pizzaName) LIKE ?', keyword)
     }
 
     const results = await pizzas.paginate(page, perPage)
